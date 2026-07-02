@@ -86,26 +86,6 @@ python eval/behavior_tests.py
 
 The evaluator checks schema compliance, catalog URL validation, guardrails, refinement, comparison, and Recall@10 against the trace-derived expected shortlists.
 
-## Render Deployment
-
-1. Push this repository to GitHub.
-2. Create a Render web service from the repo.
-3. Use the included `render.yaml` or Docker runtime.
-4. Set environment variables:
-   - `USE_LLM=true` if using Sarvam polishing.
-   - `ENABLE_KG=true`
-   - `SARVAM_API_KEY`
-   - `SARVAM_BASE_URL=https://api.sarvam.ai/v1/chat/completions`
-   - `SARVAM_MODEL=sarvam-30b`
-   - `CATALOG_PATH=data/shl_catalog.json`
-   - `TOP_K_RETRIEVAL=30`
-   - `TOP_K_FINAL=10`
-
-Render start command:
-
-```bash
-uvicorn app.main:app --host 0.0.0.0 --port $PORT
-```
 
 ## Notes
 
