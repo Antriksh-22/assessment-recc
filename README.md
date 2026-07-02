@@ -8,6 +8,16 @@ The system recommends SHL assessments from the provided catalog JSON. It support
 
 ---
 
+## HLD
+
+<img width="7488" height="1800" alt="image" src="https://github.com/user-attachments/assets/4eefebee-7a4e-443e-a5bd-c23abfde4dcc" />
+
+
+## LLD
+
+<img width="2948" height="4200" alt="image" src="https://github.com/user-attachments/assets/2885bc98-9764-43c6-836b-048d164a4e9b" />
+
+
 ## Public API
 
 **Base URL**
