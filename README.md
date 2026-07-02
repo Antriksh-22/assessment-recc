@@ -67,7 +67,7 @@ Recommendations contain only catalog-backed `name`, `url`, and `test_type` field
 
 - `USE_LLM`: `true` or `false`. The app works with `false`.
 - `ENABLE_KG`: `true` or `false`. Defaults to `true`; the lightweight in-memory knowledge graph is optional.
-- `SARVAM_API_KEY`: Sarvam key. Do not commit it.
+- `SARVAM_API_KEY`: Sarvam key.
 - `SARVAM_BASE_URL`: default `https://api.sarvam.ai/v1/chat/completions`.
 - `SARVAM_MODEL`: default `sarvam-30b`.
 - `CATALOG_PATH`: default `data/shl_catalog.json`.
