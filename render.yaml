@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: shl-assessment-recommender
+    runtime: docker
+    healthCheckPath: /health
+    envVars:
+      - key: USE_LLM
+        value: "false"
+      - key: ENABLE_KG
+        value: "true"
+      - key: SARVAM_API_KEY
+        sync: false
+      - key: SARVAM_BASE_URL
+        value: "https://api.sarvam.ai/v1/chat/completions"
+      - key: SARVAM_MODEL
+        value: "sarvam-30b"
+      - key: CATALOG_PATH
+        value: "data/shl_catalog.json"
+      - key: TOP_K_RETRIEVAL
+        value: "30"
+      - key: TOP_K_FINAL
+        value: "10"
