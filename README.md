@@ -76,6 +76,16 @@ Recommendations contain only catalog-backed `name`, `url`, and `test_type` field
 
 Sarvam is used only to polish reply text. Recommendation selection remains deterministic. The optional knowledge graph uses plain in-memory Python structures for small reranking/explanation boosts; no Neo4j or external graph database is required.
 
+## Public API Deployment
+
+This project is deployed as a public FastAPI service, not as a traditional frontend website.  
+The assignment evaluator is expected to call the API endpoints directly.
+
+### Base URL
+
+```text
+https://shl-assessment-recommender-kufk.onrender.com
+
 ## Tests and Evaluation
 
 ```bash
@@ -85,7 +95,27 @@ python eval/behavior_tests.py
 ```
 
 The evaluator checks schema compliance, catalog URL validation, guardrails, refinement, comparison, and Recall@10 against the trace-derived expected shortlists.
+## Demo Test
 
+Use this sample request to test whether the deployed recommender is working correctly.
+
+### Demo Scenario
+
+A recruiter wants assessments for a graduate management trainee program.  
+They need cognitive ability, personality, and situational judgement.
+
+### Request
+
+```json
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "We run a graduate management trainee scheme. Need cognitive, personality, and situational judgement."
+    }
+  ]
+}
+```
 
 ## Notes
 
